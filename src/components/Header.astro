@@ -1,0 +1,18 @@
+---
+import HeaderButton from "./HeaderButton.astro";
+
+console.log("javascroipt");
+---
+
+<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+	<div class="mx-auto text-center mb-8 lg:mb-16">
+		<h2 class="text-5xl tracking-tight font-extrabold">Octopus 🐙 Dev</h2>
+	</div>
+	<nav
+		class="flex flex-col items-center justify-between w-full text-center md:flex-row gap-2"
+	>
+		<HeaderButton href="/">Home</HeaderButton>
+		<HeaderButton href="/projects">Projects</HeaderButton>
+		<HeaderButton href="/about">About this Site</HeaderButton>
+	</nav>
+</header>

@@ -1,0 +1,22 @@
+---
+const { id } = Astro.params;
+import Layout from "../../layouts/Layout.astro";
+import { Projects } from "../../mocks/projects.json";
+//Esta funcion recorre todos los ids y genera ya todas las rutas!
+export function getStaticPaths() {
+	const result = Projects.map((project) => {
+		return {
+			params: {
+				id: project.id,
+			},
+		};
+	});
+	return result;
+}
+---
+
+<Layout title=`Project: ${id}`>
+	<section>
+		<h1>Id del proyecto que se esta navegando: {id}</h1>
+	</section>
+</Layout>
