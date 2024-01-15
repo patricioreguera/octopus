@@ -17,7 +17,6 @@ import { Projects as Project } from "../mocks/projects.json";
 							<p>{client.Description}</p>
 							<p
 								class:list={[
-									"text-white",
 									{
 										"text-orange-400": client.Status !== "Succes",
 										"text-lime-500": client.Status === "Succes",
